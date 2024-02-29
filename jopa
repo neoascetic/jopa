@@ -1,0 +1,61 @@
+#!/bin/bash
+
+export from=${from:-"$PWD/pages"}
+export to=${to:-"$PWD/www"}
+export ext=${ext:-"html"}
+export indexes=${indexes:-"$from/index.jsh"}
+export layout_file=${layout_file:-"layout.jsh"}
+export pages=${pages:-"$from/*.jsh"}
+
+multiline() { # multiline [markdown] varname << 'JOPA'
+  if [[ "$#" -eq 2 ]]; then 
+    read -r -d '' "${@:2}"
+    read -r -d '' $2 <<< "$($1 <<< "${!2}")"
+  else
+    read -r -d '' "$@"
+  fi
+}
+
+page_id() { echo "_page_env_${1//[^a-zA-Z0-9]/_}"; }
+read_page() {
+  set -a
+  src="${1##*/}"
+  target="${src%.*}.$ext"
+  source "$1" >&2
+}
+store_page() { printf -v $(page_id $1) '%s' "$(read_page $1; declare -px)"; }
+load_page() { local id=$(page_id $1); echo "${!id}"; }
+
+each() {
+  for p in $1; do
+    (set -a; eval "$(load_page $p)"; "${@:2}")
+  done
+}
+
+render() { envsubst <<< "$1"; }
+
+to_layout() {
+  [[ ! "$layout" && -f "$layout_file" ]] && source "$layout_file" >&2
+  render "$layout" > "$to/$target"
+}
+
+process() { each "$pages $indexes" to_layout; }
+
+jopa() {
+  mkdir -p "$to"
+  pages="$(for p in $pages; do
+             for i in $indexes; do [[ "$p" -ef "$i" ]] && continue 2; done
+             echo $p
+           done)"
+  for p in $pages; do store_page $p; done
+  for i in $indexes; do store_page $i; done
+  process
+}
+
+if [[ "$0" = "$BASH_SOURCE" ]]; then
+  if [[ "$#" -ne 0 ]]; then
+    printf "$0 does not accept any arguments; use env variables instead"
+    exit 1
+  fi
+  jopa
+fi

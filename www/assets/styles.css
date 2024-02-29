@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  background-color: #7F5E00;
+  font-family: serif;
+  min-width: 700px;
+}
+pre {
+  overflow: scroll;
+}
+header a {
+  color: white;
+  text-decoration: none;
+}
+header, footer {
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+.main {
+  background-color: white;
+  padding: 50px 0;
+}
+ol.toc {
+  list-style-position: inside;
+  margin: 15px 0;
+  padding: 0;
+}
+.index-header .separate-link {
+  float: right;
+}
+.self-link {
+  text-decoration: none;
+  color: black;
+}
+.self-link:before {
+  content: "# ";
+  position: relative;
+  display: block;
+  width: 0;
+  height: 0;
+  left: -15px;
+  color: lightgray;
+}
+.index:target .self-link:before, .self-link:hover:before {
+  text-decoration: none;
+  color: black;
+}
+.index {
+  border-top: 1px solid lightgray;
+}
+article {
+  margin: 0 auto;
+  width: 600px;
+  hyphens: auto;
+  text-align: justify;
+}
+article img {
+  display: block;
+  margin: 0 auto;
+}
+article img + em {
+  display: block;
+  text-align: center;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
