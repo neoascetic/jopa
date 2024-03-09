@@ -30,7 +30,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Install dependencies
-        run: sudo apt-get install -y gettext
+        run: sudo apt-get install -y gettext markdown
       - name: Build docs
         run: bash my-jopa
       - name: Upload artifact

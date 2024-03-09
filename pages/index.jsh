@@ -14,7 +14,7 @@ JOPA
 multiline indexer_main << 'JOPA'
   <section class="index" id="jopa-${target}">
     <div class="index-header">
-      <a class="separate-link" href="/${target}">(read on a separate page)</a></span>
+      <a class="separate-link" href="${target}">(read on a separate page)</a></span>
       <h3><a class="self-link" href="#jopa-${target}">${title}</a></h3>
     </div>
     ${content}

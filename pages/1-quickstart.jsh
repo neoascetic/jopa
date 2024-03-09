@@ -9,8 +9,8 @@ package. If these are not installed, go do, I'll wait.
 
 Okay, now, when dependencies are ready, you need to grab the actual Jopa
 code. You can  grab the code directly from GitHub  or just copy-paste it
-from the  [code](/code.html) page. Put the  code in a file  named `jopa`
-and do not forget to make it executable:
+from the [code](code.html) page. Put the code in a file named `jopa` and
+do not forget to make it executable:
 
     chmod +x ./jopa
 

@@ -1,4 +1,5 @@
 website_name="JOPA"
+website_url="https://neoascetic.github.io/jopa/"
 website_description="Simple thus hackable static site generator"
 description=${description:-$website_description}
 
@@ -11,12 +12,12 @@ multiline layout << 'JOPA'
   <title>${website_name} ${title}</title>
   <meta name="viewport" content="width=device-width">
   <meta name="description" content="${description}">
-  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
 
 <body>
   <header>
-    <h1><a href="/">${website_name}</a></h1>
+    <h1><a href="${website_url}">${website_name}</a></h1>
     <h2>${website_description}</h2>
   </header>
 
@@ -28,7 +29,7 @@ multiline layout << 'JOPA'
   </div>
 
   <footer>
-    built with <a href="/">(_x_)</a>
+    built with <a href="${website_url}">(_x_)</a>
   </footer>
 </body>
 JOPA
