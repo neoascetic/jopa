@@ -8,9 +8,9 @@ uses  `bash >=  3`  and [`envsubst`][envsubst]  from the  `gettext-base`
 package. If these are not installed, go do, I'll wait.
 
 Okay, now, when dependencies are ready, you need to grab the actual Jopa
-code. You can  grab the code directly from GitHub  or just copy-paste it
-from the [code](code.html) page. Put the code in a file named `jopa` and
-do not forget to make it executable:
+code.  You  can  grab  the  code  [directly  from  GitHub][gh]  or  just
+copy-paste it  from the [code](code.html) page.  Put the code in  a file
+named `jopa` and do not forget to make it executable:
 
     chmod +x ./jopa
 
@@ -63,5 +63,6 @@ create  more pages,  edit example  layout  template, or  jump into  more
 advanced topics.
 
 [envsubst]: https://www.gnu.org/software/gettext/manual/html_node/envsubst-Invocation.html
+[gh]: https://github.com/neoascetic/jopa
 
 JOPA
