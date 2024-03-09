@@ -7,7 +7,7 @@ generator writtent  in bash.  It uses  a couple  of conventions  to make
 writing stuff fun and easy.
 
 The main idea is to [ab]use env  variables to do both configuration of a
-website and also its generation. Everything  in **jopa** world is a bash
+website and also its generation. Everything  in **Jopa** world is a bash
 script - including posts you write, layouts and, of course, **`./jopa`**
 itself.
 
