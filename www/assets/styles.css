@@ -2,7 +2,6 @@ body {
   margin: 0;
   background-color: #7F5E00;
   font-family: serif;
-  min-width: 700px;
 }
 pre {
   overflow: scroll;
@@ -18,7 +17,7 @@ header, footer {
 }
 .main {
   background-color: white;
-  padding: 50px 0;
+  padding: 30px;
 }
 ol.toc {
   list-style-position: inside;
@@ -49,9 +48,9 @@ ol.toc {
   border-top: 1px solid lightgray;
 }
 article {
-  margin: 0 auto;
-  width: 600px;
   hyphens: auto;
+  margin: 0 auto;
+  max-width: 600px;
   text-align: justify;
 }
 article img {
