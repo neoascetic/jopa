@@ -1,11 +1,11 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-export from=${from:-"$PWD/pages"}
-export to=${to:-"$PWD/www"}
-export ext=${ext:-"html"}
-export indexes=${indexes:-"$from/index.jsh"}
-export layout_file=${layout_file:-"layout.jsh"}
-export pages=${pages:-"$from/*.jsh"}
+export from=${from-"$PWD/pages"}
+export to=${to-"$PWD/www"}
+export ext=${ext-".html"}
+export indexes=${indexes-"$from/index.jsh"}
+export layout_file=${layout_file-"layout.jsh"}
+export pages=${pages-"$from/*.jsh"}
 
 multiline() { # multiline [markdown] varname << 'JOPA'
   if [[ "$#" -eq 2 ]]; then 
@@ -20,7 +20,7 @@ page_id() { echo "_page_env_${1//[^a-zA-Z0-9]/_}"; }
 read_page() {
   set -a
   src="${1##*/}"
-  target="${src%.*}.$ext"
+  target="${src%.*}$ext"
   source "$1" >&2
 }
 store_page() { printf -v $(page_id $1) '%s' "$(read_page $1; declare -px)"; }
