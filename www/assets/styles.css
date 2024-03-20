@@ -4,7 +4,7 @@ body {
   font-family: serif;
 }
 pre {
-  overflow: scroll;
+  overflow: auto;
 }
 header a {
   color: white;
