@@ -5,6 +5,7 @@ export to=${to-"$PWD/www"}
 export ext=${ext-".html"}
 export indexes=${indexes-"$from/index.jsh"}
 export layout_file=${layout_file-"layout.jsh"}
+shopt -s nullglob
 export pages=${pages-"$from/*.jsh"}
 
 multiline() { # multiline [markdown] varname << 'JOPA'
