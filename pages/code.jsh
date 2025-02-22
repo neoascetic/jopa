@@ -1,4 +1,5 @@
 title="Code"
+description="Source code behind Jopa static site generator"
 
 # prepend code with four spaces to make markdown happy
 code="$(cat ./jopa | awk '{print "    " $0}')"

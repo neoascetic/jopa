@@ -1,4 +1,5 @@
 title="Quickstart"
+description="Jump into Jopa by following this quick intro tutorial"
 
 multiline markdown content << 'JOPA'
 

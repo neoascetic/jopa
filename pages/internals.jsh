@@ -1,4 +1,5 @@
 title="Internals"
+description="Find out what happens under Jopa's hood"
 
 multiline markdown content << 'JOPA'
 
@@ -76,14 +77,14 @@ this conditionally).  Again, you can  have any logic, for  example, have
 defaults for `$title`:
 
     website_title="My Website"
-    
+
     # prepend website title to any page's title
     if [[ "$title" ]]; then
       head_title="$title | $website_title"
     else
       head_title="$website_title"
     fi
-    
+
     # define mandatory layout variable
     multiline layout << 'JOPA'
 
