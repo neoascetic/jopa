@@ -23,6 +23,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+      pages: "pages/quickstart.jsh pages/internals.jsh pages/code.jsh pages/license.jsh"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -32,7 +33,7 @@ jobs:
       - name: Install dependencies
         run: sudo apt-get install -y gettext markdown
       - name: Build docs
-        run: bash my-jopa
+        run: bash jopa
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
