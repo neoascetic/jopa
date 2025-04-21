@@ -1,0 +1,8 @@
+name: Run jopa
+description: Run jopa static site generator against your code
+
+runs:
+  using: composite
+  steps:
+    - run: $GITHUB_ACTION_PATH/jopa
+      shell: bash

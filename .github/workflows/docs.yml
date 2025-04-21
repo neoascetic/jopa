@@ -25,20 +25,14 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-      - name: Install dependencies
-        run: sudo apt-get install -y gettext markdown
-      - name: Build docs
-        run: bash jopa
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v4
+      - run: sudo apt-get install -y gettext markdown
+      - uses: ./
         env:
           pages: "pages/quickstart.jsh pages/internals.jsh pages/code.jsh pages/license.jsh"
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: 'www'
-      - name: Deploy to GitHub Pages
-        id: deployment
+      - id: deployment
         uses: actions/deploy-pages@v4
