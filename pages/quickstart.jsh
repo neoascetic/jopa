@@ -63,6 +63,16 @@ Congratulations!  You are  now an  official  Jopa blogger.  You can  now
 create  more pages,  edit example  layout  template, or  jump into  more
 advanced topics.
 
+#### Deploy to GitHub Pages with GitHub Actions
+
+To build and deploy your site automatically on GitHub Pages, add just these two steps to your workflow:
+
+    # on other systems, the install command may differ
+    - run: sudo apt-get install -y gettext
+    - uses: neoascetic/jopa@master
+
+That's it! The action will take care of everything else.
+
 [envsubst]: https://www.gnu.org/software/gettext/manual/html_node/envsubst-Invocation.html
 [gh]: https://github.com/neoascetic/jopa
 
