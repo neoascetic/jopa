@@ -13,7 +13,7 @@ multiline layout << 'JOPA'
   <meta name="viewport" content="width=device-width">
   <meta name="description" content="${description}">
   <link rel="stylesheet" href="assets/styles.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><text y='50' font-size='64'>*</text></svg>" sizes="any">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-10 0 100 100'><text y='0.85em' font-size='160'>*</text></svg>">
 </head>
 
 <body>
