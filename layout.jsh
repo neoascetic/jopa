@@ -22,12 +22,12 @@ multiline layout << 'JOPA'
     <h2>${website_description}</h2>
   </header>
 
-  <div class="main">
+  <main>
     <article>
      <h2>${title}</h2>
      ${content}
     </article>
-  </div>
+  </main>
 
   <footer>
     built with <a href="${website_url}">(_*_)</a>
