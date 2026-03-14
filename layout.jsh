@@ -13,6 +13,7 @@ multiline layout << 'JOPA'
   <meta name="viewport" content="width=device-width">
   <meta name="description" content="${description}">
   <link rel="stylesheet" href="assets/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><text y='50' font-size='64'>*</text></svg>" sizes="any">
 </head>
 
 <body>
@@ -29,7 +30,11 @@ multiline layout << 'JOPA'
   </div>
 
   <footer>
-    built with <a href="${website_url}">(_x_)</a>
+    built with <a href="${website_url}">(_*_)</a>
   </footer>
+
+  <link rel="preconnect" href="https://server.ethicalads.io">
+  <div id="jopa-ad" class="adaptive" data-ea-publisher="githackcom" data-ea-style="fixedfooter" data-ea-type="text" data-ea-verbosity="quiet"></div>
+  <script defer src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
 </body>
 JOPA

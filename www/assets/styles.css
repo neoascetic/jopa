@@ -15,6 +15,9 @@ header, footer {
   color: white;
   text-align: center;
 }
+footer {
+  margin-bottom: 50px;
+}
 .main {
   background-color: white;
   padding: 30px;
