@@ -34,7 +34,7 @@ multiline layout << 'JOPA'
   </footer>
 
   <link rel="preconnect" href="https://server.ethicalads.io">
-  <div id="jopa-ad" class="adaptive" data-ea-publisher="githackcom" data-ea-style="fixedfooter" data-ea-type="text" data-ea-verbosity="quiet"></div>
+  <div id="jopa-ad" class="" data-ea-publisher="githackcom" data-ea-style="fixedfooter" data-ea-type="text" data-ea-verbosity="quiet"></div>
   <script defer src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
 </body>
 JOPA
