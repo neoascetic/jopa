@@ -12,7 +12,12 @@ there to grab the code. Here is the **full** Jopa code, just $ln lines:
 
 $code
 
-<img src="https://github.com/neoascetic/jopa/assets/725836/93599ed6-8f6b-4449-a042-bfccd12ff62a" alt="Others looking at Jopa" loading="lazy" decoding="async" width="300" height="300">
+<img
+  src="https://github.com/neoascetic/jopa/assets/725836/93599ed6-8f6b-4449-a042-bfccd12ff62a"
+  alt="Others looking at Jopa"
+  loading="lazy" decoding="async"
+  width="300" height="300"
+  style="max-height: 300px; max-width: 300px; height: 100%; width: 100%">
 *Other site generators looking at Jopa's source code*
 
 [gh]: https://github.com/neoascetic/jopa
