@@ -20,28 +20,28 @@ your pages will be defined. Something  like below, I'll use the simplest
 possible HTML5 page there and you can extend it later.
 
     cat <<'EOF' > layout.jsh
-    
+
     website_title="My wonderful website"
-    
+
     multiline layout << 'JOPA'
     <!doctype html>
     <meta charset=utf-8>
     <title>${title} | ${website_title}</title>
     ${content}
     JOPA
-    
+
     EOF
 
 Okay, let's  jump to the  fun stuff and create  the first page  of your.
 future website  The page will be  located in `pages/` directory,  so we.
-need to create one beforehand                                          .
+need to create one beforehand.
 
     mkdir -p pages
 
     cat <<'EOF' > pages/index.jsh
-    
+
     title="My first page"
-    
+
     multiline content << 'JOPA'
     Hello world!
     <br>
@@ -65,7 +65,8 @@ advanced topics.
 
 #### Deploy to GitHub Pages with GitHub Actions
 
-To build and deploy your site automatically on GitHub Pages, add just these two steps to your workflow:
+To build  and deploy your site  automatically on GitHub Pages,  add just
+these two steps to your workflow:
 
     # on other systems, the install command may differ
     - run: sudo apt-get install -y gettext
